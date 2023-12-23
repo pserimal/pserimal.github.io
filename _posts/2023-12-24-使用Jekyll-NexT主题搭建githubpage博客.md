@@ -1,11 +1,12 @@
 ---
-title: 使用 Jekyll NexT 主题搭建 gitpage 博客
+title: 使用 Jekyll NexT 主题搭建 github page 博客
 date: 2023-12-24
 categories:
     - linux
     - blogs
 tags:
 ---
+
 
 # 使用 Jekyll NexT 主题搭建 github page 博客
 
@@ -30,7 +31,7 @@ markdown 文件需要添加头信息
 
 ```yaml
 ---
-title: 使用 Jekyll NexT 主题搭建 gitpage 博客
+title: 使用 Jekyll NexT 主题搭建 github page 博客
 date: 2023-12-24
 categories:
     - linux
