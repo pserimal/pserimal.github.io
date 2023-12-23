@@ -1,12 +1,11 @@
 ---
-title: 使用 Jekyll NexT 主题搭建 github page 博客
-date: 2023-12-24
+title: Categories
+date: 2013-12-24 23:30:09
 categories:
-- linux
-- blogs
-tags:
+- Foo
+- Bar
+- Baz
 ---
-
 
 # 使用 Jekyll NexT 主题搭建 github page 博客
 
