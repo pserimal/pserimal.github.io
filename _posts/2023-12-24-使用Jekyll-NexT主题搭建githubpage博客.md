@@ -1,5 +1,5 @@
 ---
-title: 使用 Jekyll NexT 主题搭建 github page 博客
+title: Jekyll NexT
 date: 2023-12-24
 categories:
 - Linux
