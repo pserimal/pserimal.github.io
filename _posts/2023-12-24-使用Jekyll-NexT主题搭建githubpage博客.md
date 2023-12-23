@@ -1,6 +1,6 @@
 ---
-title: 使用 Jekyll NexT 主题搭建 github page 博客
-date: 2023-12-24
+title: 第一篇文章
+date: 2023-12-24 23:30:09
 categories:
 - linux
 ---
