@@ -1,11 +1,9 @@
 ---
-title: Jekyll NexT github page
+title: 使用 Jekyll NexT 主题搭建 github page 博客
 date: 2023-12-24
 categories:
 - linux
 ---
-
-# 使用 Jekyll NexT 主题搭建 github page 博客
 
 [Jekyll](https://jekyllrb.com/) 可以很方便地用来搭建 github page 静态博客，也是 github 官方推荐的工具 [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll) ，之前偶然看见有人使用的 next 主题十分简洁，但 NexT 主题是 Hexo 下的主题，好在几年前有人将其移植到了 Jekyll 上 -> [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next)
 
