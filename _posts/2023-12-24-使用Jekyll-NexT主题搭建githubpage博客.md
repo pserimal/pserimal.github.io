@@ -36,3 +36,13 @@ categories:
 ```
 
 分别表示文章标题、日期、分类、标签
+
+## 踩坑
+
+当我推送到 github 仓库时死活都不行，折腾了好几个小时，最后...，请参考这篇文章 [使用Jekyll时遇到的时区问题](https://changwh.github.io/2019/03/17/timezone-issue-in-jekyll/#%E6%9A%82%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)，居然是因为时区问题，而 jekyll 解析到拥有**未来时间** 的文件时会直接跳过（真是给我折腾死了）
+
+最粗暴的解决方式，在 `_config.yml` 文件中添加配置
+
+```yaml
+future: true
+```
