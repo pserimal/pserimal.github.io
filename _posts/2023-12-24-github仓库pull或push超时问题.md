@@ -1,6 +1,6 @@
 ---
 title: git 仓库 pull 或 push 超时问题
-date: 2023-12-24
+date: 2023-12-25
 categories:
     - 杂类
 tags:
