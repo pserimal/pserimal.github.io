@@ -16,14 +16,14 @@ tags:
 
 Mapper
 
-```Java
+```java
 @Mapper
 public interface SBTestMapper {
     String queryByName(@Param("username") StringBuilder username);
 }
 ```
 
-```XML
+```xml
 <select id="queryByName" resultType="java.lang.String" parameterType="java.lang.StringBuilder" >
     SELECT `password` FROM user_info WHERE username = #{username}
 </select>
@@ -49,7 +49,7 @@ public interface SBTestMapper {
 
 那再换个思路，官方代码库的 issue 列表中有无相关问题？很遗憾，截止我写这篇博客（2024-01-18），issue 列表中用 **StringBuilder** 作为关键词查询我并没有找到相关的问题，但有条 issue 中的解决方案确实能解决问题，[unable to use dynamic sql to update value with dynamic column #2369](https://github.com/mybatis/mybatis-3/issues/2369)，其中建议使用 `${}` 来代替 `#{}`，尝试了下，将查询语句修改如下：
 
-```SQL
+```sql
 SELECT `password` FROM user_info WHERE username = "${username}"
 ```
 
@@ -69,7 +69,7 @@ SELECT `password` FROM user_info WHERE username = "${username}"
 
 那么是直接继承这个接口吗，里面的方法怎么实现呢，不急，我们先看看 MyBatis 中对这个接口中 `setParameter` 方法的实现，只有一个 `org.apache.ibatis.type.BaseTypeHandler` 类实现了这个方法
 
-```Java
+```java
 @Override
 public void setParameter(PreparedStatement ps, int i, T parameter, JdbcType jdbcType) throws SQLException {
     if (parameter == null) {
@@ -101,7 +101,7 @@ public void setParameter(PreparedStatement ps, int i, T parameter, JdbcType jdbc
 
 仿照 `StringTypeHandler` 来写一个吧！
 
-```Java
+```java
 package com.imal.springtrick.mapper.typehandler;
 
 import org.apache.ibatis.type.BaseTypeHandler;
@@ -143,7 +143,7 @@ public class StringBuilderHandler extends BaseTypeHandler<StringBuilder> {
 
 然后在 SQL 中进行设置
 
-```SQL
+```sql
 SELECT `password` FROM user_info WHERE username = #{username,typeHandler=com.imal.springtrick.mapper.typehandler.StringBuilderHandler}
 ```
 
