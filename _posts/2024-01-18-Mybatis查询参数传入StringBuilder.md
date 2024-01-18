@@ -158,3 +158,7 @@ SELECT `password` FROM user_info WHERE username = #{username,typeHandler=com.ima
 ```
 
 并且注意到这次打印的日志是 `pserimal(String)`，说明我们重写的 setNonNullParameter 方法生效了！
+
+# 疑问
+
+MyBatis 是在什么时候调用这些 TypeHandler 的呢，我们自己定义的 Hnadler 和 MyBatis 自带的有什么区别，为什么框架自带不用使用 `typeHandler=com.imal.springtrick.mapper.typehandler.StringBuilderHandler` 的方式指定呢？这些问题留到以后来盘（或许有，万一有呢）
