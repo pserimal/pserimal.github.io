@@ -61,7 +61,7 @@ SELECT `password` FROM user_info WHERE username = "${username}"
 
 查看官方文档，能找到这样一条说明 [XML 映射器#参数](https://mybatis.org/mybatis-3/zh_CN/sqlmap-xml.html#Parameters)
 
-![Alt text](../assets/images/blogs/MyBatis%E6%96%87%E6%A1%A3XML%E6%98%A0%E5%B0%84%E5%99%A8%E5%8F%82%E6%95%B0TypeHandler.jpg)
+![关于 TypeHandler 的使用](https://github.com/pserimal/pserimal.github.io/blob/master/assets/images/blogs/MyBatis文档XML映射器参数TypeHandler.jpg?raw=true)
 
 哦？那我们不妨试试自定义一个 TypeHandler 来使用吧！
 
